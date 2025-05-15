@@ -12,7 +12,7 @@ bot = discord.Bot()
 @bot.event
 async def on_ready():
     print(f"{bot.user}でログインしました。")
-    activity = discord.Game(name=">>help")
+    activity = discord.Game(name="/automod")
     await bot.change_presence(status=discord.Status.online, activity=activity)
 
 @bot.slash_command(name="automod", description="automod true")

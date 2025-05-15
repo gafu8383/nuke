@@ -9,6 +9,7 @@ TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix=">>", intents=intents)
+bot.remove_command("help")
 
 @bot.event
 async def on_ready():
@@ -98,7 +99,7 @@ async def automod(ctx):#ここで起動コマンドを変えられるよ
 
     return
 
-@bot.help.command
+@bot.command
 async def help(ctx):#ここで起動コマンドを変えられるよ
     try:
         await ctx.message.delete()

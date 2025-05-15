@@ -1,6 +1,7 @@
 import asyncio
 import aiohttp
 import discord
+from keepalive import keep_alive
 from discord.ext import commands
 import os
 
@@ -95,4 +96,5 @@ async def automod(ctx):#ここで起動コマンドを変えられるよ
 
     return
 
+keep_alive()
 bot.run(TOKEN)#ここに自分のtokenを入れてね

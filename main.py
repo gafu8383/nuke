@@ -4,12 +4,14 @@ import discord
 from discord.ext import commands
 import os
 
+TOKEN = os.getenv("TOKEN")
+
 bot = discord.Bot()
 
 @bot.event
 async def on_ready():
     print(f"{bot.user}でログインしました。")
-    activity = discord.Game(name="made by みっちー")
+    activity = discord.Game(name=">>help")
     await bot.change_presence(status=discord.Status.online, activity=activity)
 
 @bot.slash_command(name="automod", description="automod true")
@@ -93,4 +95,4 @@ async def automod(ctx):#ここで起動コマンドを変えられるよ
 
     return
 
-bot.run("token")#ここに自分のtokenを入れてね
+bot.run(TOKEN)#ここに自分のtokenを入れてね
